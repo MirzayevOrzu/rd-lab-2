@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 require('dotenv').config();
 const cors = require('cors');
-const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const {
@@ -12,8 +11,6 @@ const {
 } = require('./controllers');
 const morgan = require('morgan');
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
 app.use(cors());
 app.use(morgan('tiny'));
 app.use(express.static('public'));
