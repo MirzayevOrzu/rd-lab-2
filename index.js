@@ -29,7 +29,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8081;
 mongoose.connect(process.env.DB_URL, (err) => {
   if (err) {
     console.log('Database connection error', err.message);
